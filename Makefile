@@ -23,10 +23,6 @@ publish:
 	git add reports/
 	git commit -m "chore: weekly triage $(WEEK)"
 	git push
-	gh issue create -R $(REPO) \
-	  --title "📊 Weekly Triage $(WEEK)" \
-	  --body-file $(REPORT) \
-	  --label triage-report
 
 clean:
 	rm -f /tmp/kweaver-issues.json
